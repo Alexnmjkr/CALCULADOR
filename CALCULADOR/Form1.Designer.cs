@@ -32,6 +32,7 @@ namespace CALCULADOR
             labelResultado = new Label();
             textBoxNumero1 = new TextBox();
             textBoxNumero2 = new TextBox();
+            buttonLimpiar = new Button();
             SuspendLayout();
             // 
             // buttonSumar
@@ -77,11 +78,11 @@ namespace CALCULADOR
             // labelResultado
             // 
             labelResultado.AutoSize = true;
-            labelResultado.Location = new Point(137, 97);
+            labelResultado.Location = new Point(101, 97);
             labelResultado.Name = "labelResultado";
-            labelResultado.Size = new Size(13, 15);
+            labelResultado.Size = new Size(62, 15);
             labelResultado.TabIndex = 4;
-            labelResultado.Text = "0";
+            labelResultado.Text = "Resultado:";
             // 
             // textBoxNumero1
             // 
@@ -97,11 +98,22 @@ namespace CALCULADOR
             textBoxNumero2.Size = new Size(100, 23);
             textBoxNumero2.TabIndex = 6;
             // 
+            // buttonLimpiar
+            // 
+            buttonLimpiar.Location = new Point(92, 240);
+            buttonLimpiar.Name = "buttonLimpiar";
+            buttonLimpiar.Size = new Size(100, 26);
+            buttonLimpiar.TabIndex = 7;
+            buttonLimpiar.Text = "Limpiar";
+            buttonLimpiar.UseVisualStyleBackColor = true;
+            buttonLimpiar.Click += buttonLimpiar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(284, 301);
+            Controls.Add(buttonLimpiar);
             Controls.Add(textBoxNumero2);
             Controls.Add(textBoxNumero1);
             Controls.Add(labelResultado);
@@ -124,5 +136,6 @@ namespace CALCULADOR
         private Label labelResultado;
         private TextBox textBoxNumero1;
         private TextBox textBoxNumero2;
+        private Button buttonLimpiar;
     }
 }

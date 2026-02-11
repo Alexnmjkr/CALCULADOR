@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CALCULADOR
 {
@@ -10,7 +11,7 @@ namespace CALCULADOR
             InitializeComponent();
         }
 
-        private double LeerNumero(TextBox textBox)
+        private double LeerNumero(System.Windows.Forms.TextBox textBox)
         {
             if (double.TryParse(textBox.Text, out double numero))
                 return numero;
@@ -76,6 +77,13 @@ namespace CALCULADOR
             }
 
             labelResultado.Text = "Resultado: " + (a / b);
+        }
+
+        private void buttonLimpiar_Click(object sender, EventArgs e)
+        {
+            textBoxNumero1.Clear();
+            textBoxNumero2.Clear();
+            labelResultado.Text = "0";
         }
     }
 }
