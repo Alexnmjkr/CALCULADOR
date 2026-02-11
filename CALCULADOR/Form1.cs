@@ -85,5 +85,10 @@ namespace CALCULADOR
             textBoxNumero2.Clear();
             labelResultado.Text = "0";
         }
+
+        private void buttonSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -33,6 +33,7 @@ namespace CALCULADOR
             textBoxNumero1 = new TextBox();
             textBoxNumero2 = new TextBox();
             buttonLimpiar = new Button();
+            buttonSalir = new Button();
             SuspendLayout();
             // 
             // buttonSumar
@@ -100,7 +101,7 @@ namespace CALCULADOR
             // 
             // buttonLimpiar
             // 
-            buttonLimpiar.Location = new Point(92, 240);
+            buttonLimpiar.Location = new Point(92, 263);
             buttonLimpiar.Name = "buttonLimpiar";
             buttonLimpiar.Size = new Size(100, 26);
             buttonLimpiar.TabIndex = 7;
@@ -108,11 +109,22 @@ namespace CALCULADOR
             buttonLimpiar.UseVisualStyleBackColor = true;
             buttonLimpiar.Click += buttonLimpiar_Click;
             // 
+            // buttonSalir
+            // 
+            buttonSalir.Location = new Point(92, 295);
+            buttonSalir.Name = "buttonSalir";
+            buttonSalir.Size = new Size(100, 23);
+            buttonSalir.TabIndex = 8;
+            buttonSalir.Text = "Salir";
+            buttonSalir.UseVisualStyleBackColor = true;
+            buttonSalir.Click += buttonSalir_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(284, 301);
+            ClientSize = new Size(284, 353);
+            Controls.Add(buttonSalir);
             Controls.Add(buttonLimpiar);
             Controls.Add(textBoxNumero2);
             Controls.Add(textBoxNumero1);
@@ -137,5 +149,6 @@ namespace CALCULADOR
         private TextBox textBoxNumero1;
         private TextBox textBoxNumero2;
         private Button buttonLimpiar;
+        private Button buttonSalir;
     }
 }
