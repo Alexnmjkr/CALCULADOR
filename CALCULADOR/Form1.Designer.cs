@@ -34,11 +34,14 @@ namespace CALCULADOR
             textBoxNumero2 = new TextBox();
             buttonLimpiar = new Button();
             buttonSalir = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // buttonSumar
             // 
-            buttonSumar.Location = new Point(92, 122);
+            buttonSumar.Location = new Point(92, 126);
             buttonSumar.Name = "buttonSumar";
             buttonSumar.Size = new Size(100, 23);
             buttonSumar.TabIndex = 0;
@@ -48,7 +51,7 @@ namespace CALCULADOR
             // 
             // buttonRestar
             // 
-            buttonRestar.Location = new Point(92, 151);
+            buttonRestar.Location = new Point(92, 155);
             buttonRestar.Name = "buttonRestar";
             buttonRestar.Size = new Size(100, 23);
             buttonRestar.TabIndex = 1;
@@ -58,7 +61,7 @@ namespace CALCULADOR
             // 
             // buttonMultiplicar
             // 
-            buttonMultiplicar.Location = new Point(92, 180);
+            buttonMultiplicar.Location = new Point(92, 184);
             buttonMultiplicar.Name = "buttonMultiplicar";
             buttonMultiplicar.Size = new Size(100, 23);
             buttonMultiplicar.TabIndex = 2;
@@ -68,7 +71,7 @@ namespace CALCULADOR
             // 
             // buttonDividir
             // 
-            buttonDividir.Location = new Point(92, 211);
+            buttonDividir.Location = new Point(92, 215);
             buttonDividir.Name = "buttonDividir";
             buttonDividir.Size = new Size(100, 23);
             buttonDividir.TabIndex = 3;
@@ -79,22 +82,22 @@ namespace CALCULADOR
             // labelResultado
             // 
             labelResultado.AutoSize = true;
-            labelResultado.Location = new Point(101, 97);
+            labelResultado.Location = new Point(101, 87);
             labelResultado.Name = "labelResultado";
-            labelResultado.Size = new Size(62, 15);
+            labelResultado.Size = new Size(65, 15);
             labelResultado.TabIndex = 4;
             labelResultado.Text = "Resultado:";
             // 
             // textBoxNumero1
             // 
-            textBoxNumero1.Location = new Point(92, 71);
+            textBoxNumero1.Location = new Point(92, 61);
             textBoxNumero1.Name = "textBoxNumero1";
             textBoxNumero1.Size = new Size(100, 23);
             textBoxNumero1.TabIndex = 5;
             // 
             // textBoxNumero2
             // 
-            textBoxNumero2.Location = new Point(92, 42);
+            textBoxNumero2.Location = new Point(92, 32);
             textBoxNumero2.Name = "textBoxNumero2";
             textBoxNumero2.Size = new Size(100, 23);
             textBoxNumero2.TabIndex = 6;
@@ -119,11 +122,42 @@ namespace CALCULADOR
             buttonSalir.UseVisualStyleBackColor = true;
             buttonSalir.Click += buttonSalir_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(84, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(118, 15);
+            label1.TabIndex = 9;
+            label1.Text = "Ingresa los numeros";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(74, 108);
+            label2.Name = "label2";
+            label2.Size = new Size(137, 15);
+            label2.TabIndex = 10;
+            label2.Text = "**************************";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(74, 241);
+            label3.Name = "label3";
+            label3.Size = new Size(137, 15);
+            label3.TabIndex = 11;
+            label3.Text = "**************************";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Thistle;
             ClientSize = new Size(284, 353);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(buttonSalir);
             Controls.Add(buttonLimpiar);
             Controls.Add(textBoxNumero2);
@@ -133,6 +167,8 @@ namespace CALCULADOR
             Controls.Add(buttonMultiplicar);
             Controls.Add(buttonRestar);
             Controls.Add(buttonSumar);
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ForeColor = Color.Purple;
             Name = "Form1";
             Text = "Calculadora";
             ResumeLayout(false);
@@ -150,5 +186,8 @@ namespace CALCULADOR
         private TextBox textBoxNumero2;
         private Button buttonLimpiar;
         private Button buttonSalir;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }
