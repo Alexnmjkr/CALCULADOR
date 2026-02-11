@@ -21,6 +21,12 @@ namespace CALCULADOR
 
         private void buttonSumar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBoxNumero1.Text) || string.IsNullOrWhiteSpace(textBoxNumero2.Text))
+            {
+                MessageBox.Show("Por favor, llena todos los campos");
+                return;
+            }
+
             double a = LeerNumero(textBoxNumero1);
             double b = LeerNumero(textBoxNumero2);
             labelResultado.Text = "Resultado: " + (a + b);
@@ -28,6 +34,12 @@ namespace CALCULADOR
 
         private void buttonRestar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBoxNumero1.Text) || string.IsNullOrWhiteSpace(textBoxNumero2.Text))
+            {
+                MessageBox.Show("Por favor, llena todos los campos");
+                return;
+            }
+
             double a = LeerNumero(textBoxNumero1);
             double b = LeerNumero(textBoxNumero2);
             labelResultado.Text = "Resultado: " + (a - b);
@@ -35,6 +47,12 @@ namespace CALCULADOR
 
         private void buttonMultiplicar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBoxNumero1.Text) || string.IsNullOrWhiteSpace(textBoxNumero2.Text))
+            {
+                MessageBox.Show("Por favor, llena todos los campos");
+                return;
+            }
+
             double a = LeerNumero(textBoxNumero1);
             double b = LeerNumero(textBoxNumero2);
             labelResultado.Text = "Resultado: " + (a * b);
@@ -42,6 +60,12 @@ namespace CALCULADOR
 
         private void buttonDividir_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBoxNumero1.Text) || string.IsNullOrWhiteSpace(textBoxNumero2.Text))
+            {
+                MessageBox.Show("Por favor, llena todos los campos");
+                return;
+            }
+
             double a = LeerNumero(textBoxNumero1);
             double b = LeerNumero(textBoxNumero2);
 
